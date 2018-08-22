@@ -21,6 +21,9 @@ public class DrawPanel extends JPanel {
     ArrayList<Box> innerBoxes = new ArrayList<>();
     Box selectedOuterBox = null;
     Box selectedInnerBox = null;
+
+    int translateX = 10;
+    int translateY = 10;
     //ApproximateNearestNeighbour algorithm;
 
     //Step by step variables
@@ -31,6 +34,7 @@ public class DrawPanel extends JPanel {
     double radius;
     double radius_epsilon;
     boolean query_visualisation = false;
+    int cellOrder;
 
     public DrawPanel(HyperCube hyperCube, ApproximateNearestNeighbour algorithm) {
         this.hyperCube = hyperCube;
@@ -51,35 +55,42 @@ public class DrawPanel extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (e.getX() > hyperBox.end[0] || e.getY() > hyperBox.end[1]) return;
-                QueryAnswer queryAnswer = algorithm.answerQuery2D(e.getX(), e.getY());
-                query_x = e.getX();
-                query_y = e.getY();
-                int steps = queryAnswer.ordered_cells.size();
-                radius = radius_epsilon = -1;
-                query_visualisation = true;
-                System.out.println("visualisation");
-                for (int i=0; i<steps; i++) {
-                    System.out.println(i);
-                    closest_point = queryAnswer.closest_points.get(i);
-                    current_cell = queryAnswer.ordered_cells.get(i);
+                query_x = e.getX() - translateX;
+                query_y = e.getY() - translateY;
+                QueryAnswer queryAnswer = algorithm.answerQuery2D(query_x, query_y);
+                visualiseQuery(queryAnswer, algorithm);
+            }
+        });
+
+    }
+
+    void visualiseQuery(QueryAnswer queryAnswer, ApproximateNearestNeighbour algorithm) {
+        int steps = queryAnswer.ordered_cells.size();
+        radius = radius_epsilon = -1;
+        query_visualisation = true;
+        System.out.println("visualisation");
+        for (int i=0; i<steps; i++) {
+            cellOrder = i;
+            System.out.println(i);
+            closest_point = queryAnswer.closest_points.get(i);
+            current_cell = queryAnswer.ordered_cells.get(i);
 //                    revalidate();
 //                    repaint();
 //                    updateUI();
-                    paintImmediately(0, 0, getWidth(), getHeight());
+            paintImmediately(0, 0, getWidth(), getHeight());
 
-                    try {
-                        Thread.sleep(5000);
-                    } catch (InterruptedException e1) {
-                        e1.printStackTrace();
-                    }
-                    radius = queryAnswer.shortest_distances.get(i);
-                    radius_epsilon = radius / (1 + algorithm.epsilon);
-                }
-                current_cell = queryAnswer.lastCell;
-                paintImmediately(0, 0, getWidth(), getHeight());
-                query_visualisation = false;
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e1) {
+                e1.printStackTrace();
             }
-        });
+            radius = queryAnswer.shortest_distances.get(i);
+            radius_epsilon = radius / (1 + algorithm.epsilon);
+        }
+        cellOrder++;
+        current_cell = queryAnswer.lastCell;
+        paintImmediately(0, 0, getWidth(), getHeight());
+        query_visualisation = false;
 
     }
 
@@ -109,13 +120,25 @@ public class DrawPanel extends JPanel {
 
     @Override
     protected void paintComponent(Graphics g) {
+        g.translate(translateX, translateY);
         super.paintComponent(g);
 
         System.out.println("repaint");
         Graphics2D g2 = (Graphics2D)g;
+        //g2.scale(1, -1);
 
         g.setColor(Color.WHITE);
-        g.fillRect(0, 0, this.getWidth(), this.getHeight());
+        g.fillRect(-10, -10, this.getWidth(), this.getHeight());
+
+        g.setColor(Color.BLACK);
+        g.drawLine(0, 0, 550, 0);
+        g.drawLine(0, 0, 0, 550);
+        g.drawLine(550, 0, 540, 10);
+        g.drawLine(550, 0, 540, -10);
+        g.drawLine(0, 550, 10, 540);
+        g.drawLine(0, 550, -10, 540);
+        g.drawString("X", 555, 0);
+        g.drawString("Y", 0, 565);
 
         g.setColor(Color.lightGray);
         for (Box box: innerBoxes) {
@@ -157,6 +180,7 @@ public class DrawPanel extends JPanel {
             Rectangle2D rect = new Rectangle2D.Double(current_cell.outerBox.begin[0], current_cell.outerBox.begin[1],
                     current_cell.outerBox.end[0] - current_cell.outerBox.begin[0], current_cell.outerBox.end[1] - current_cell.outerBox.begin[1]);
             g2.draw(rect);
+            g2.drawString("" + cellOrder, (int)((Rectangle2D.Double) rect).x, (int)((Rectangle2D.Double) rect).y);
             if (current_cell.innerBox != null) {
                 rect = new Rectangle2D.Double(current_cell.innerBox.begin[0], current_cell.innerBox.begin[1],
                         current_cell.innerBox.end[0] - current_cell.innerBox.begin[0], current_cell.innerBox.end[1] - current_cell.innerBox.begin[1]);
