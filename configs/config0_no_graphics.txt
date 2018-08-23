@@ -1,0 +1,3 @@
+randomGeneratePoints false
+graphicsON false
+epsilon 0.2

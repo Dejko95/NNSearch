@@ -20,4 +20,14 @@ public class DataPoint {
         }
         return Math.sqrt(sum);
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("(");
+        for (int i=0; i<coordinates.length - 1; i++) {
+            sb.append(coordinates[i] + ", ");
+        }
+        sb.append(coordinates[coordinates.length - 1] + ")");
+        return sb.toString();
+    }
 }

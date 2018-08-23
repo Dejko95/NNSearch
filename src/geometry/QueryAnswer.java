@@ -13,6 +13,7 @@ public class QueryAnswer {
     public ArrayList<Double> shortest_distances = new ArrayList<>();
     public ArrayList<DataPoint> closest_points = new ArrayList<>();
     public Cell lastCell = null;
+    public DataPoint trueClosestPoint = null;
 
     void findClosestK(DataPoint q, BBDTree tree, int k, double epsilon) {
         cellDistanceComparator = new CellDistanceComparator(q);
@@ -57,5 +58,19 @@ public class QueryAnswer {
             }
         }
         return cell;
+    }
+
+    void trueClosestPoint(DataPoint q, ArrayList<DataPoint> points) {
+        DataPoint closestPoint = null;
+        double closestDistance = Double.MAX_VALUE;
+        double distance;
+        for (DataPoint point: points) {
+            distance = q.distanceFrom(point);
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestPoint = point;
+            }
+        }
+        trueClosestPoint = closestPoint;
     }
 }

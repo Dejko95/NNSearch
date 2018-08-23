@@ -3,4 +3,4 @@ graphicsON true
 epsilon 0.2
 dimension 2
 bounds 500,500
-pointCount 999
+pointCount 9
