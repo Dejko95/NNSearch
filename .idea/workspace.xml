@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fe79ff6-5757-4d3a-98d7-c0ca66000415" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/configRandom99.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configs/configRandom99.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/ApproximateNearestNeighbour$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/ApproximateNearestNeighbour$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/ApproximateNearestNeighbour.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/ApproximateNearestNeighbour.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/DataPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/DataPoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/QueryAnswer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/QueryAnswer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/gui/DrawPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/gui/DrawPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/gui/Visualiser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/gui/Visualiser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/configTestEps0_2" beforeDir="false" afterPath="$PROJECT_DIR$/configs/configTestEps0_2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/configTestEps0_4" beforeDir="false" afterPath="$PROJECT_DIR$/configs/configTestEps0_4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/configTestEps1_0" beforeDir="false" afterPath="$PROJECT_DIR$/configs/configTestEps1_0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometry/ApproximateNearestNeighbour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/ApproximateNearestNeighbour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometry/DataPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/DataPoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometry/QueryAnswer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/QueryAnswer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/DrawPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Visualiser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Visualiser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/InputPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/InputPanel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,58 +19,109 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="uniform_n10000_d2_b5000_eps100.out" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/uniform_n10000_d2_b5000_eps100.out">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="uniform_n10000_d3_b500_eps40.out" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/uniform_n10000_d3_b500_eps40.out">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="uniform_n10000_d7_b5000_eps100.out" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/uniform_n10000_d7_b5000_eps100.out">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="uniform_n10000_d15_b5000_eps20.out" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/uniform_n10000_d15_b5000_eps20.out">
+      <file leaf-file-name="QueryAnswer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/geometry/QueryAnswer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="221">
+              <caret line="74" column="5" lean-forward="true" selection-start-line="62" selection-start-column="4" selection-end-line="74" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uniform_n10000_d15_b5000_eps40.out" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/uniform_n10000_d15_b5000_eps40.out">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="KDTreeQueryAnswer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/geometry/KDTreeQueryAnswer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="uniform_n10000_d20_b5000_eps100.out" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/uniform_n10000_d20_b5000_eps100.out">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="configTestEps0_2" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/configs/configTestEps0_2">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="uniform_n10000_d20_b5000_eps20.out" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/uniform_n10000_d20_b5000_eps20.out">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="configTestEps0_4" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/configs/configTestEps0_4">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="uniform_n10000_d20_b5000.in" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/uniform_n10000_d20_b5000.in">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="configTestEps1_0" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/configs/configTestEps1_0">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="uniform_n10000_d20_b5000_eps40.out" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/uniform_n10000_d20_b5000_eps40.out">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="Box.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/geometry/Box.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="uniform_n10000_d15_b5000_eps100.out" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/uniform_n10000_d15_b5000_eps100.out">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="KDCell.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/geometry/KDCell.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="63" column="34" lean-forward="true" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CellDistanceComparator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/geometry/CellDistanceComparator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="46" selection-end-column="5" />
+              <folding>
+                <element signature="e#180#181#0" expanded="true" />
+                <element signature="e#206#207#0" expanded="true" />
+                <element signature="e#264#265#0" expanded="true" />
+                <element signature="e#333#334#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApproximateNearestNeighbour.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/geometry/ApproximateNearestNeighbour.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="58" column="53" selection-start-line="58" selection-start-column="53" selection-end-line="58" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KDTree.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/geometry/KDTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -142,14 +186,17 @@
         <option value="$PROJECT_DIR$/src/gui/DrawPanel.java" />
         <option value="$PROJECT_DIR$/configs/config0_no_graphics.txt" />
         <option value="$PROJECT_DIR$/src/geometry/DataPoint.java" />
-        <option value="$PROJECT_DIR$/src/geometry/QueryAnswer.java" />
         <option value="$PROJECT_DIR$/configs/configRandom99.txt" />
-        <option value="$PROJECT_DIR$/src/gui/InputPanel.java" />
         <option value="$PROJECT_DIR$/configs/config_random_3d.txt" />
+        <option value="$PROJECT_DIR$/src/gui/InputPanel.java" />
+        <option value="$PROJECT_DIR$/src/geometry/KDTree.java" />
+        <option value="$PROJECT_DIR$/src/geometry/QueryAnswer.java" />
+        <option value="$PROJECT_DIR$/src/geometry/KDCell.java" />
         <option value="$PROJECT_DIR$/configs/configTestEps0_2" />
         <option value="$PROJECT_DIR$/configs/configTestEps0_4" />
         <option value="$PROJECT_DIR$/configs/configTestEps1_0" />
         <option value="$PROJECT_DIR$/src/geometry/ApproximateNearestNeighbour.java" />
+        <option value="$PROJECT_DIR$/src/geometry/KDTreeQueryAnswer.java" />
       </list>
     </option>
   </component>
@@ -311,12 +358,12 @@
       <updated>1533316301426</updated>
       <workItem from="1533316304850" duration="80031000" />
       <workItem from="1534241839599" duration="8078000" />
-      <workItem from="1534954400852" duration="41007000" />
+      <workItem from="1534954400852" duration="48625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129116000" />
+    <option name="totallyTimeSpent" value="136734000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -411,47 +458,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/gui/CellTreeModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/Operation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/Box.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/SplittingRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/CellDistanceComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding>
-            <element signature="e#180#181#0" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#264#265#0" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inputExamples/input2.in">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -520,30 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/Cell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/DataPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/QueryAnswer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configs/config0_no_graphics.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -565,31 +547,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/BBDTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="74" column="34" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/MidpointAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="105" column="46" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configs/config0.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="14" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configs/configTestEps0_2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -609,30 +570,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/uniform_n1000_d2_b500.out">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/InputPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="47" column="150" selection-start-line="42" selection-start-column="16" selection-end-line="47" selection-end-column="150" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configs/configTestEps0_4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configs/configTestEps1_0">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/uniform_n1000_d2_b5000_eps40.out">
       <provider selected="true" editor-type-id="text-editor">
@@ -658,16 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-153">
           <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/geometry/ApproximateNearestNeighbour.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="104" column="14" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -722,7 +649,134 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/uniform_n10000_d20_b5000_eps40.out">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/InputPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometry/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometry/BBDTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometry/MidpointAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="105" column="46" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometry/DataPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometry/Box.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometry/CellDistanceComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="46" selection-end-column="5" />
+          <folding>
+            <element signature="e#180#181#0" expanded="true" />
+            <element signature="e#206#207#0" expanded="true" />
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#333#334#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometry/KDCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="63" column="34" lean-forward="true" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometry/QueryAnswer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="74" column="5" lean-forward="true" selection-start-line="62" selection-start-column="4" selection-end-line="74" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/configTestEps0_2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/configTestEps0_4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/configTestEps1_0">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometry/KDTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometry/KDTreeQueryAnswer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/geometry/ApproximateNearestNeighbour.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="58" column="53" selection-start-line="58" selection-start-column="53" selection-end-line="58" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

@@ -73,4 +73,5 @@ public class QueryAnswer {
         }
         trueClosestPoint = closestPoint;
     }
+
 }

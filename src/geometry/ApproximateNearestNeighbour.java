@@ -26,6 +26,7 @@ public class ApproximateNearestNeighbour {
     int bounds[];
     int pointCount;
     public boolean testing = false;
+    boolean kd = false;
 
     public ArrayList<DataPoint> testPoints;
     public String testOutPath;
@@ -49,32 +50,51 @@ public class ApproximateNearestNeighbour {
 
         // ? scalePoints();
 
-        bbdTree = new BBDTree(hyperCube);
-        if (graphicsON) {
-            SwingUtilities.invokeLater(new Runnable() {
-                public void run() {
-                    new Visualiser(bbdTree.rootCell, hyperCube, ApproximateNearestNeighbour.this);
+        if (kd) {
+            try {
+                int maxVisited = 0;
+                int sumVisited = 0;
+                KDTree kdTree = new KDTree(hyperCube);
+                PrintWriter pw = new PrintWriter("kd_" + testOutPath);
+                KDTreeQueryAnswer query = new KDTreeQueryAnswer();
+                for (DataPoint q: testPoints) {
+                    query.findClosestKD(q, kdTree, hyperCube.points);
+                    maxVisited = Math.max(maxVisited, query.visited);
+                    sumVisited += query.visited;
                 }
-            });
+                pw.println("Max visited: " + maxVisited);
+                pw.println("Avg visited: " + sumVisited / (double)testPoints.size());
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
         } else {
-            if (testing) {
-                try {
-                    runTests();
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-            } else {
+            bbdTree = new BBDTree(hyperCube);
+            if (graphicsON) {
                 SwingUtilities.invokeLater(new Runnable() {
                     public void run() {
-                        //new Visualiser(bbdTree.rootCell, hyperCube, ApproximateNearestNeighbour.this);
-                        JFrame basicFrame = new JFrame();
-                        basicFrame.setVisible(true);
-                        basicFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-                        basicFrame.add(new InputPanel(ApproximateNearestNeighbour.this, null));
-                        basicFrame.pack();
-                        basicFrame.setLocationRelativeTo(null);
+                        new Visualiser(bbdTree.rootCell, hyperCube, ApproximateNearestNeighbour.this);
                     }
                 });
+            } else {
+                if (testing) {
+                    try {
+                        runTests();
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    SwingUtilities.invokeLater(new Runnable() {
+                        public void run() {
+                            //new Visualiser(bbdTree.rootCell, hyperCube, ApproximateNearestNeighbour.this);
+                            JFrame basicFrame = new JFrame();
+                            basicFrame.setVisible(true);
+                            basicFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+                            basicFrame.add(new InputPanel(ApproximateNearestNeighbour.this, null));
+                            basicFrame.pack();
+                            basicFrame.setLocationRelativeTo(null);
+                        }
+                    });
+                }
             }
         }
     }
@@ -161,6 +181,9 @@ public class ApproximateNearestNeighbour {
         }
         if (configParams.containsKey("testing")) {
             testing = Boolean.valueOf(configParams.get("testing"));
+        }
+        if (configParams.containsKey("kd")) {
+            kd = Boolean.valueOf(configParams.get("kd"));
         }
         //System.out.println("bounds:");
         //Arrays.stream(bounds).forEach(System.out::println);

@@ -12,15 +12,25 @@ public class InputPanel extends JPanel {
     public InputPanel(ApproximateNearestNeighbour algorithm, DrawPanel drawPanel) {
         setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
         setPreferredSize(new Dimension(200, 100));
-        setLayout(new GridLayout(2, 2, 5, 5));
+        setLayout(new GridLayout(3, 2, 5, 5));
         JTextField epsilonInput = new JTextField(algorithm.epsilon + "");
         JButton epsilonButton = new JButton("Set epsilon");
         JTextField queryInput = new JTextField();
         JButton queryButton = new JButton("Query");
+        JButton reset = new JButton("Reset");
         add(epsilonInput);
         add(epsilonButton);
         add(queryInput);
         add(queryButton);
+        add(reset);
+
+        reset.addActionListener(e -> {
+            JFrame frame = (JFrame)SwingUtilities.getWindowAncestor(InputPanel.this);
+            frame.dispose();
+            //(JFrame)SwingUtilities.getWindowAncestor(InputPanel.this);
+            new ApproximateNearestNeighbour();
+        });
+
         epsilonButton.addActionListener(e -> {
             algorithm.epsilon = Double.valueOf(epsilonInput.getText());
         });
