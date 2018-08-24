@@ -17,4 +17,13 @@ public class Box {
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("");
+        for (int i=0; i<begin.length; i++) {
+            sb.append(begin[i] + "-" + end[i] + ", ");
+        }
+        return sb.toString();
+    }
 }

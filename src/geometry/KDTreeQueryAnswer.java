@@ -29,6 +29,7 @@ public class KDTreeQueryAnswer {
 
         if (Math.abs(closestDistance - trueClosestDistance(q, points)) > 0.00001) {
             try {
+                System.out.println(closestDistance + " " + trueClosestDistance(q, points));
                 throw new Exception("nije dobro");
             } catch (Exception e) {
                 e.printStackTrace();
@@ -60,8 +61,8 @@ public class KDTreeQueryAnswer {
         double distance;
         for (DataPoint point: points) {
             distance = q.distanceFrom(point);
-            if (distance < closestDistance) {
-                closestDistance = distance;
+            if (distance < trueClosestDistance) {
+                trueClosestDistance = distance;
             }
         }
         return trueClosestDistance;

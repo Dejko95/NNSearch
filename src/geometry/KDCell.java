@@ -12,6 +12,7 @@ public class KDCell {
 
 
     public void divide(int dimension) {
+        //System.out.println(box);
         int dimensionCount = points.get(0).coordinates.length;
         if (dimension >= dimensionCount) {
             dimension -= dimensionCount;

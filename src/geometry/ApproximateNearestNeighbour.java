@@ -55,8 +55,9 @@ public class ApproximateNearestNeighbour {
                 int maxVisited = 0;
                 int sumVisited = 0;
                 KDTree kdTree = new KDTree(hyperCube);
-                PrintWriter pw = new PrintWriter("kd_" + testOutPath);
+                PrintWriter pw = new PrintWriter(testOutPath + "_kd");
                 KDTreeQueryAnswer query = new KDTreeQueryAnswer();
+                //int cnt = 0;
                 for (DataPoint q: testPoints) {
                     query.findClosestKD(q, kdTree, hyperCube.points);
                     maxVisited = Math.max(maxVisited, query.visited);
@@ -64,6 +65,7 @@ public class ApproximateNearestNeighbour {
                 }
                 pw.println("Max visited: " + maxVisited);
                 pw.println("Avg visited: " + sumVisited / (double)testPoints.size());
+                pw.close();
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
