@@ -14,6 +14,7 @@ import java.util.Arrays;
 
 public class Visualiser extends JFrame {
     public Visualiser(Cell rootCell, HyperCube hyperCube, ApproximateNearestNeighbour algorithm) {
+        setTitle("NNSearch");
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         //JPanel panel = new JPanel();

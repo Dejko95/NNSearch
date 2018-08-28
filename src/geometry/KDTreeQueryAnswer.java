@@ -30,7 +30,7 @@ public class KDTreeQueryAnswer {
         if (Math.abs(closestDistance - trueClosestDistance(q, points)) > 0.00001) {
             try {
                 System.out.println(closestDistance + " " + trueClosestDistance(q, points));
-                throw new Exception("nije dobro");
+                throw new Exception("WA");
             } catch (Exception e) {
                 e.printStackTrace();
             }

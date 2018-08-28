@@ -12,7 +12,7 @@ public class MidpointAlgorithm extends PartitionAlgorithm {
     }
 
     @Override
-    void split(Cell cell, boolean calledFromShrink) {
+    public void split(Cell cell, boolean calledFromShrink) {
         if (cell.points.size() <= 1) {
             cell.leaf = true;
             return;
@@ -79,7 +79,7 @@ public class MidpointAlgorithm extends PartitionAlgorithm {
     }
 
     @Override
-    void shrink(Cell cell) {
+    public void shrink(Cell cell) {
         if (cell.points.size() <= 1) {
             cell.leaf = true;
             return;
@@ -152,7 +152,7 @@ public class MidpointAlgorithm extends PartitionAlgorithm {
     }
 
     //majority is shrinking box
-    void processShrinkingBox(Cell cell, Cell majority) {
+    public void processShrinkingBox(Cell cell, Cell majority) {
         cell.operation = Operation.shrink;
         Cell difference = new Cell();
         // rest of the points are outer (other option is to do partition again, with respect to boundaries)
@@ -172,17 +172,17 @@ public class MidpointAlgorithm extends PartitionAlgorithm {
         }
     }
 
-    int findSplitingDimension(Cell cell) {
+    public int findSplitingDimension(Cell cell) {
         if (splittingRule == SplittingRule.orthogonal) {
             Cell anc = cell.parent;
-            if (anc == cell) {
-                System.out.println("wtf");
-            }
+//            if (anc == cell) {
+//                System.out.println("err");
+//            }
             while (anc != null && /*anc.splittingDimension == -1*/ anc.operation != Operation.split) {
                 anc = anc.parent;
-                if (anc == anc.parent) {
-                    System.out.println("wtf");
-                }
+//                if (anc == anc.parent) {
+//                    System.out.println("err");
+//                }
             }
 
             if (anc != null) {

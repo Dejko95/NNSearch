@@ -68,15 +68,11 @@ public class DrawPanel extends JPanel {
         int steps = queryAnswer.ordered_cells.size();
         radius = radius_epsilon = -1;
         query_visualisation = true;
-        System.out.println("visualisation");
         for (int i=0; i<steps; i++) {
             cellOrder = i;
             System.out.println(i);
             closest_point = queryAnswer.closest_points.get(i);
             current_cell = queryAnswer.ordered_cells.get(i);
-//                    revalidate();
-//                    repaint();
-//                    updateUI();
             paintImmediately(0, 0, getWidth(), getHeight());
 
             try {
@@ -123,7 +119,6 @@ public class DrawPanel extends JPanel {
         g.translate(translateX, translateY);
         super.paintComponent(g);
 
-        System.out.println("repaint");
         Graphics2D g2 = (Graphics2D)g;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         //g2.scale(1, -1);

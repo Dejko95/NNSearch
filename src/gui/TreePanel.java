@@ -15,23 +15,20 @@ import java.awt.event.FocusListener;
 
 public class TreePanel extends JPanel {
     public TreePanel(Cell rootCell, DrawPanel drawPanel) {
-        setBackground(Color.RED);
+        setBackground(Color.WHITE);
         CellTreeModel treeModel = new CellTreeModel(rootCell);
         JTree tree = new JTree();
         tree.setModel(treeModel);
         add(tree);
         tree.collapseRow(0);
-        //tree.colla
 
         tree.addTreeSelectionListener(new TreeSelectionListener() {
             @Override
             public void valueChanged(TreeSelectionEvent e) {
-                System.out.println("change");
                 Cell selectedCell = (Cell)tree.getLastSelectedPathComponent();
                 drawPanel.selectedOuterBox = selectedCell.outerBox;
                 drawPanel.selectedInnerBox = selectedCell.innerBox;
                 drawPanel.borrowedPoint = selectedCell.borrowed;
-                System.out.println("Borrowed: " + selectedCell.borrowed);
                 drawPanel.repaint();
             }
         });
@@ -52,7 +49,6 @@ public class TreePanel extends JPanel {
             @Override
             public void treeCollapsed(TreeExpansionEvent event) {
                 Cell selectedCell = (Cell)event.getPath().getLastPathComponent();
-                System.out.println("collapsing " + selectedCell);
                 drawPanel.removeOuterBox(selectedCell.highChild.outerBox);
                 //drawPanel.removeInnerBox(selectedCell.highChild.innerBox);
                 drawPanel.removeOuterBox(selectedCell.lowChild.outerBox);

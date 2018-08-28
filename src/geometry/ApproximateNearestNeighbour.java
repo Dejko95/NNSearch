@@ -112,7 +112,6 @@ public class ApproximateNearestNeighbour {
         int zeros = 0;
 
         for (DataPoint q: testPoints) {
-            System.out.println(cnt);
             QueryAnswer queryAnswer = answerQuery(q);
             DataPoint closestPoint = queryAnswer.closest_points.get(queryAnswer.closest_points.size() - 1);
             if (q.distanceFrom(queryAnswer.trueClosestPoint) < 0.00001) continue;
@@ -171,9 +170,7 @@ public class ApproximateNearestNeighbour {
             configParams.put(key, value);
         }
 
-        System.out.println(configParams.get("randomGeneratePoints"));
         randomGeneratePoints = Boolean.valueOf(configParams.get("randomGeneratePoints"));
-        //inputPath = configParams.get("inputPath");
         graphicsON = Boolean.valueOf(configParams.get("graphicsON"));
         epsilon = Double.valueOf(configParams.get("epsilon"));
         if (randomGeneratePoints) {
@@ -204,7 +201,7 @@ public class ApproximateNearestNeighbour {
         } while (true);
         Scanner sc = new Scanner(inputFile);
         testOutPath = inputFile.getAbsolutePath().replaceFirst("\\.in", "_eps" + (int)(epsilon * 100) + ".out");
-        System.out.println(testOutPath);
+        //System.out.println(testOutPath);
 
         // read number of dimensions
         dimension = sc.nextInt();

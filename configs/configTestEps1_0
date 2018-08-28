@@ -2,4 +2,4 @@ randomGeneratePoints false
 graphicsON false
 epsilon 1.0
 testing true
-kd true
+kd false

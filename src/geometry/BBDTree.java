@@ -3,8 +3,8 @@ package geometry;
 import javax.xml.crypto.Data;
 
 public class BBDTree {
-    Cell rootCell;
-    PartitionAlgorithm partitionAlgorithm;
+    public Cell rootCell;
+    public PartitionAlgorithm partitionAlgorithm;
 
     public BBDTree(HyperCube hyperCube) {
         rootCell = new Cell();
