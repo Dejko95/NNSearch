@@ -2,12 +2,12 @@ package gui;
 
 
 import geometry.*;
-import geometry.Box;
+import geometry.bbd_tree.Box;
+import geometry.bbd_tree.Cell;
+import geometry.bbd_tree.QueryAnswer;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.geom.Ellipse2D;
@@ -24,7 +24,7 @@ public class DrawPanel extends JPanel {
 
     int translateX = 10;
     int translateY = 10;
-    //ApproximateNearestNeighbour algorithm;
+    //NearestNeighbour algorithm;
 
     //Step by step variables
     int query_x;
@@ -36,7 +36,7 @@ public class DrawPanel extends JPanel {
     boolean query_visualisation = false;
     int cellOrder;
 
-    public DrawPanel(HyperCube hyperCube, ApproximateNearestNeighbour algorithm) {
+    public DrawPanel(HyperCube hyperCube, NearestNeighbour algorithm) {
         this.hyperCube = hyperCube;
         //this.algorithm = algorithm;
 
@@ -54,9 +54,9 @@ public class DrawPanel extends JPanel {
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                if (e.getX() > hyperBox.end[0] || e.getY() > hyperBox.end[1]) return;
                 query_x = e.getX() - translateX;
                 query_y = e.getY() - translateY;
+                if (query_x > hyperBox.end[0] || query_y > hyperBox.end[1]) return;
                 QueryAnswer queryAnswer = algorithm.answerQuery2D(query_x, query_y);
                 visualiseQuery(queryAnswer, algorithm);
             }
@@ -64,7 +64,7 @@ public class DrawPanel extends JPanel {
 
     }
 
-    void visualiseQuery(QueryAnswer queryAnswer, ApproximateNearestNeighbour algorithm) {
+    void visualiseQuery(QueryAnswer queryAnswer, NearestNeighbour algorithm) {
         int steps = queryAnswer.ordered_cells.size();
         radius = radius_epsilon = -1;
         query_visualisation = true;
@@ -171,18 +171,24 @@ public class DrawPanel extends JPanel {
         }
 
         if (query_visualisation) {
-            g2.setColor(Color.MAGENTA);
+            g2.setColor(Color.BLUE);
             g2.fillOval(query_x - 2, query_y - 2, 5, 5);
+
+            if (current_cell.innerBox != null) {
+                g2.setColor(Color.gray);
+                Rectangle2D rect = new Rectangle2D.Double(current_cell.innerBox.begin[0], current_cell.innerBox.begin[1],
+                        current_cell.innerBox.end[0] - current_cell.innerBox.begin[0], current_cell.innerBox.end[1] - current_cell.innerBox.begin[1]);
+                g2.fill(rect);
+            }
+
+            g2.setColor(Color.BLUE);
             Rectangle2D rect = new Rectangle2D.Double(current_cell.outerBox.begin[0], current_cell.outerBox.begin[1],
                     current_cell.outerBox.end[0] - current_cell.outerBox.begin[0], current_cell.outerBox.end[1] - current_cell.outerBox.begin[1]);
             g2.draw(rect);
             g2.drawString("" + cellOrder, (int)((Rectangle2D.Double) rect).x, (int)((Rectangle2D.Double) rect).y);
-            if (current_cell.innerBox != null) {
-                rect = new Rectangle2D.Double(current_cell.innerBox.begin[0], current_cell.innerBox.begin[1],
-                        current_cell.innerBox.end[0] - current_cell.innerBox.begin[0], current_cell.innerBox.end[1] - current_cell.innerBox.begin[1]);
-                g2.draw(rect);
-            }
+
             if (radius > 0) {
+                g2.setColor(Color.green);
                 Ellipse2D circle = new Ellipse2D.Double(query_x - radius, query_y - radius, 2 * radius, 2 * radius);
                 g2.draw(circle);
                 //g2.setStroke(new BasicStroke(2));

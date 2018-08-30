@@ -1,4 +1,6 @@
-package geometry;
+package geometry.bbd_tree;
+
+import geometry.DataPoint;
 
 public class Box {
     public double begin[];

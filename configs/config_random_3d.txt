@@ -1,0 +1,6 @@
+randomGeneratePoints true
+graphicsON false
+epsilon 0.2
+dimension 3
+bounds 500,500,500
+pointCount 99999

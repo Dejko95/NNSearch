@@ -1,6 +1,6 @@
-package geometry;
+package geometry.bbd_tree;
 
-import javax.xml.crypto.Data;
+import geometry.*;
 
 public class BBDTree {
     public Cell rootCell;

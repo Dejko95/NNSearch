@@ -1,19 +1,14 @@
 package gui;
 
-import geometry.ApproximateNearestNeighbour;
-import geometry.Cell;
+import geometry.NearestNeighbour;
+import geometry.bbd_tree.Cell;
 import geometry.HyperCube;
-import geometry.QueryAnswer;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.Arrays;
 
 public class Visualiser extends JFrame {
-    public Visualiser(Cell rootCell, HyperCube hyperCube, ApproximateNearestNeighbour algorithm) {
+    public Visualiser(Cell rootCell, HyperCube hyperCube, NearestNeighbour algorithm) {
         setTitle("NNSearch");
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

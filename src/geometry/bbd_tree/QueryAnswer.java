@@ -1,7 +1,11 @@
-package geometry;
+package geometry.bbd_tree;
+
+import geometry.CellDistanceComparator;
+import geometry.DataPoint;
+import geometry.bbd_tree.BBDTree;
+import geometry.bbd_tree.Cell;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class QueryAnswer {
@@ -15,7 +19,7 @@ public class QueryAnswer {
     public Cell lastCell = null;
     public DataPoint trueClosestPoint = null;
 
-    void findClosestK(DataPoint q, BBDTree tree, int k, double epsilon) {
+    public void findClosestK(DataPoint q, BBDTree tree, int k, double epsilon) {
         cellDistanceComparator = new CellDistanceComparator(q);
         pq = new PriorityQueue<>(cellDistanceComparator);
 
@@ -46,7 +50,7 @@ public class QueryAnswer {
         }
     }
 
-    Cell nextClosestLeafCell() {
+    public Cell nextClosestLeafCell() {
         Cell cell = pq.poll();
         while (cell != null && !cell.leaf) {
             if (cellDistanceComparator.compare(cell.lowChild, cell.highChild) < 0) {
@@ -60,7 +64,7 @@ public class QueryAnswer {
         return cell;
     }
 
-    void trueClosestPoint(DataPoint q, ArrayList<DataPoint> points) {
+    public void trueClosestPoint(DataPoint q, ArrayList<DataPoint> points) {
         DataPoint closestPoint = null;
         double closestDistance = Double.MAX_VALUE;
         double distance;

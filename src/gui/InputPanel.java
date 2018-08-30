@@ -1,15 +1,15 @@
 package gui;
 
-import geometry.ApproximateNearestNeighbour;
+import geometry.NearestNeighbour;
 import geometry.DataPoint;
-import geometry.QueryAnswer;
+import geometry.bbd_tree.QueryAnswer;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.Arrays;
 
 public class InputPanel extends JPanel {
-    public InputPanel(ApproximateNearestNeighbour algorithm, DrawPanel drawPanel) {
+    public InputPanel(NearestNeighbour algorithm, DrawPanel drawPanel) {
         setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
         setPreferredSize(new Dimension(200, 100));
         setLayout(new GridLayout(3, 2, 5, 5));
@@ -28,7 +28,7 @@ public class InputPanel extends JPanel {
             JFrame frame = (JFrame)SwingUtilities.getWindowAncestor(InputPanel.this);
             frame.dispose();
             //(JFrame)SwingUtilities.getWindowAncestor(InputPanel.this);
-            new ApproximateNearestNeighbour();
+            new NearestNeighbour();
         });
 
         epsilonButton.addActionListener(e -> {

@@ -1,4 +1,4 @@
-package geometry;
+package geometry.bbd_tree;
 
 public enum SplittingRule {
     orthogonal,

@@ -1,7 +1,11 @@
-package geometry;
+package geometry.kd_tree;
+
+import geometry.HyperCube;
+import geometry.bbd_tree.Box;
+import geometry.kd_tree.KDCell;
 
 public class KDTree {
-    KDCell rootCell;
+    public KDCell rootCell;
 
     public KDTree(HyperCube hyperCube) {
         rootCell = new KDCell();

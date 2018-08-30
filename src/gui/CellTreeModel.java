@@ -1,6 +1,6 @@
 package gui;
 
-import geometry.Cell;
+import geometry.bbd_tree.Cell;
 
 import javax.swing.event.TreeModelListener;
 import javax.swing.tree.TreeModel;

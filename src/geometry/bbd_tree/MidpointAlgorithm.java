@@ -1,6 +1,6 @@
-package geometry;
+package geometry.bbd_tree;
 
-import java.util.ArrayList;
+import geometry.*;
 
 public class MidpointAlgorithm extends PartitionAlgorithm {
 
@@ -56,10 +56,10 @@ public class MidpointAlgorithm extends PartitionAlgorithm {
 
         if (cell.innerBox != null) {
             if (cell.innerBox.begin[dimension] < splittingCoordinate) {
-                //lowCell.innerBox = new geometry.Box(hyperCube.dimensions);
+                //lowCell.innerBox = new geometry.bbd_tree.Box(hyperCube.dimensions);
                 lowCell.innerBox = cell.innerBox;
             } else {
-                //highCell.innerBox = new geometry.Box(hyperCube.dimensions);
+                //highCell.innerBox = new geometry.bbd_tree.Box(hyperCube.dimensions);
                 highCell.innerBox = cell.innerBox;
             }
         }
@@ -103,14 +103,11 @@ public class MidpointAlgorithm extends PartitionAlgorithm {
                 //    split(remaining, false);
 
                 } else {
-                    System.out.println("DESILO SE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-                    System.out.println("M: " + majority);
-                    System.out.println("R: " + remaining);
                     //current is low child, cell - current is high
                     //second split
                     if (cell.lowChild != current && cell.highChild != current) {
                         processShrinkingBox(cell, current);
-                        System.out.println("mora shrink");
+                        //System.out.println("must use shrink");
                     }
                     //split current to majority and remaining
 
@@ -167,9 +164,6 @@ public class MidpointAlgorithm extends PartitionAlgorithm {
         cell.lowChild = majority;
         cell.highChild = difference;
         majority.parent = difference.parent = cell;
-        if (majority == cell || difference == cell) {
-            System.out.println("LOL");
-        }
     }
 
     public int findSplitingDimension(Cell cell) {

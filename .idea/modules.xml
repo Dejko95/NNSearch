@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BalancedBoxDecompositionTree.iml" filepath="$PROJECT_DIR$/BalancedBoxDecompositionTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NearestNeighbourSearch.iml" filepath="$PROJECT_DIR$/NearestNeighbourSearch.iml" />
     </modules>
   </component>
 </project>

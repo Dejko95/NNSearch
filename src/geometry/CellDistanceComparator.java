@@ -1,5 +1,7 @@
 package geometry;
 
+import geometry.bbd_tree.Cell;
+
 import java.util.Comparator;
 
 public class CellDistanceComparator implements Comparator<Cell> {
@@ -14,7 +16,7 @@ public class CellDistanceComparator implements Comparator<Cell> {
         return distanceFromQ(c1).compareTo(distanceFromQ(c2));
     }
 
-    Double distanceFromQ(Cell c) {
+    public Double distanceFromQ(Cell c) {
         if (c.innerBox != null && c.innerBox.contains(q)) {
             return distanceFromInnerBox(c);
         } else if (c.outerBox.contains(q)) {
@@ -24,7 +26,7 @@ public class CellDistanceComparator implements Comparator<Cell> {
         }
     }
 
-    Double distanceFromInnerBox(Cell c) {
+    public Double distanceFromInnerBox(Cell c) {
         double min = Double.MAX_VALUE;
         for (int dimension = 0; dimension < q.coordinates.length; dimension++) {
             min = Math.min(min, c.innerBox.end[dimension] - q.coordinates[dimension]);
@@ -33,7 +35,7 @@ public class CellDistanceComparator implements Comparator<Cell> {
         return min;
     }
 
-    Double distanceFromOuterBox(Cell c) {
+    public Double distanceFromOuterBox(Cell c) {
         double sum = 0;
         for (int dimension = 0; dimension < q.coordinates.length; dimension++) {
             double dist_dimension = max(c.outerBox.begin[dimension] - q.coordinates[dimension], 0, q.coordinates[dimension] - c.outerBox.end[dimension]);

@@ -1,14 +1,16 @@
-package geometry;
+package geometry.kd_tree;
 
-import javax.xml.crypto.Data;
+import geometry.DataPoint;
+import geometry.bbd_tree.Box;
+
 import java.util.ArrayList;
 
 public class KDCell {
-    Box box;
-    ArrayList<DataPoint> points;
-    DataPoint cellPoint;
-    KDCell leftChild = null;
-    KDCell rightChild = null;
+    public Box box;
+    public ArrayList<DataPoint> points;
+    public DataPoint cellPoint;
+    public KDCell leftChild = null;
+    public KDCell rightChild = null;
 
 
     public void divide(int dimension) {
@@ -62,7 +64,7 @@ public class KDCell {
         points = null;
     }
 
-    double distance(DataPoint q) {
+    public double distance(DataPoint q) {
         if (box.contains(q)) {
             return 0;
         }

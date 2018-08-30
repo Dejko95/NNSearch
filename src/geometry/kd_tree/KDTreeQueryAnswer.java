@@ -1,13 +1,17 @@
-package geometry;
+package geometry.kd_tree;
+
+import geometry.DataPoint;
+import geometry.kd_tree.KDCell;
+import geometry.kd_tree.KDTree;
 
 import java.util.ArrayList;
 
 public class KDTreeQueryAnswer {
-    double closestDistance;
-    int visited;
-    DataPoint q;
+    public double closestDistance;
+    public int visited;
+    public DataPoint q;
 
-    void findClosestKD(DataPoint q, KDTree kdTree, ArrayList<DataPoint> points) {
+    public void findClosestKD(DataPoint q, KDTree kdTree, ArrayList<DataPoint> points) {
         this.q = q;
 
         //locate cell
@@ -37,7 +41,7 @@ public class KDTreeQueryAnswer {
         }
     }
 
-    void search(KDCell cell) {
+    public void search(KDCell cell) {
         visited++;
         if (q.distanceFrom(cell.cellPoint) < closestDistance) {
             closestDistance = q.distanceFrom(cell.cellPoint);
@@ -55,7 +59,7 @@ public class KDTreeQueryAnswer {
         }
     }
 
-    double trueClosestDistance(DataPoint q, ArrayList<DataPoint> points) {
+    public double trueClosestDistance(DataPoint q, ArrayList<DataPoint> points) {
         //DataPoint closestPoint = null;
         double trueClosestDistance = Double.MAX_VALUE;
         double distance;

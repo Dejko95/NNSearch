@@ -1,4 +1,6 @@
-package geometry;
+package geometry.bbd_tree;
+
+import geometry.DataPoint;
 
 import java.util.ArrayList;
 

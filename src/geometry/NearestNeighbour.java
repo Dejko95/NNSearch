@@ -16,7 +16,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class ApproximateNearestNeighbour {
+public class NearestNeighbour {
 
     File configFile;
     //String inputPath = "inputExamples/input3.in";
@@ -34,7 +34,7 @@ public class ApproximateNearestNeighbour {
     public ArrayList<DataPoint> testPoints;
     public String testOutPath;
 
-    public ApproximateNearestNeighbour() {
+    public NearestNeighbour() {
         try {
             readConfig();
         } catch (FileNotFoundException e) {
@@ -77,7 +77,7 @@ public class ApproximateNearestNeighbour {
             if (graphicsON) {
                 SwingUtilities.invokeLater(new Runnable() {
                     public void run() {
-                        new Visualiser(bbdTree.rootCell, hyperCube, ApproximateNearestNeighbour.this);
+                        new Visualiser(bbdTree.rootCell, hyperCube, NearestNeighbour.this);
                     }
                 });
             } else {
@@ -90,11 +90,11 @@ public class ApproximateNearestNeighbour {
                 } else {
                     SwingUtilities.invokeLater(new Runnable() {
                         public void run() {
-                            //new Visualiser(bbdTree.rootCell, hyperCube, ApproximateNearestNeighbour.this);
+                            //new Visualiser(bbdTree.rootCell, hyperCube, NearestNeighbour.this);
                             JFrame basicFrame = new JFrame();
                             basicFrame.setVisible(true);
                             basicFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-                            basicFrame.add(new InputPanel(ApproximateNearestNeighbour.this, null));
+                            basicFrame.add(new InputPanel(NearestNeighbour.this, null));
                             basicFrame.pack();
                             basicFrame.setLocationRelativeTo(null);
                         }
@@ -269,7 +269,7 @@ public class ApproximateNearestNeighbour {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        new geometry.ApproximateNearestNeighbour();
+        new NearestNeighbour();
     }
 
 }

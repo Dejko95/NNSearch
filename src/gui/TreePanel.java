@@ -1,17 +1,13 @@
 package gui;
 
-import geometry.Cell;
+import geometry.bbd_tree.Cell;
 
 import javax.swing.*;
 import javax.swing.event.TreeExpansionEvent;
 import javax.swing.event.TreeExpansionListener;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.TreePath;
 import java.awt.*;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
 
 public class TreePanel extends JPanel {
     public TreePanel(Cell rootCell, DrawPanel drawPanel) {
