@@ -1,10 +1,13 @@
 package geometry;
 
+import geometry.bbd_tree.BBDTree;
+import geometry.bbd_tree.QueryAnswer;
+import geometry.kd_tree.KDTree;
+import geometry.kd_tree.KDTreeQueryAnswer;
 import gui.InputPanel;
 import gui.Visualiser;
 
 import javax.swing.*;
-import javax.xml.crypto.Data;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -152,7 +155,9 @@ public class ApproximateNearestNeighbour {
     void readConfig() throws FileNotFoundException {
         //choosing config file
         JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setCurrentDirectory(new File("D:\\programming\\IdeaProjects\\BalancedBoxDecompositionTree\\configs"));
+        fileChooser.setCurrentDirectory(new File("configs"));
+
+        //fileChooser.setCurrentDirectory(new File("D:\\programming\\IdeaProjects\\BalancedBoxDecompositionTree\\configs"));
         do {
             int returnVal = fileChooser.showOpenDialog(null);
             if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -191,7 +196,7 @@ public class ApproximateNearestNeighbour {
     void loadPoints() throws Exception {
         File inputFile;
         JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setCurrentDirectory(new File("D:\\programming\\IdeaProjects\\BalancedBoxDecompositionTree\\tests"));
+        fileChooser.setCurrentDirectory(new File("inputExamples"));
         do {
             int returnVal = fileChooser.showOpenDialog(null);
             if (returnVal == JFileChooser.APPROVE_OPTION) {
