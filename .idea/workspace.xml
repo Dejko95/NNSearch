@@ -2,57 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fe79ff6-5757-4d3a-98d7-c0ca66000415" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BalancedBoxDecompositionTree.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NearestNeighbourSearch.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/configRandom99.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configs/configRandom99.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/config_random_3d.txt" beforeDir="false" afterPath="$PROJECT_DIR$/configs/config_random_10d.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputExamples/input0_eps20.out_kd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputExamples/input3.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/ApproximateNearestNeighbour$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/ApproximateNearestNeighbour$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/ApproximateNearestNeighbour.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/BBDTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/Box.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/Cell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/CellDistanceComparator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/DataPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/HyperCube.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/KDCell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/KDTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/KDTreeQueryAnswer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/MiddleIntervalAlgorithm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/MidpointAlgorithm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/Operation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/PartitionAlgorithm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/QueryAnswer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/geometry/SplittingRule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/gui/CellTreeModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/gui/DrawPanel$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/gui/DrawPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/gui/InputPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/gui/TreePanel$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/gui/TreePanel$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/gui/TreePanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BalancedBoxDecompositionTree/gui/Visualiser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometry/ApproximateNearestNeighbour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/NearestNeighbour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometry/BBDTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/bbd_tree/BBDTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometry/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/bbd_tree/Box.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometry/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/bbd_tree/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometry/CellDistanceComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/CellDistanceComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometry/KDCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/kd_tree/KDCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometry/KDTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/kd_tree/KDTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometry/KDTreeQueryAnswer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/kd_tree/KDTreeQueryAnswer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometry/MidpointAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/bbd_tree/MidpointAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometry/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/bbd_tree/Operation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometry/PartitionAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/bbd_tree/PartitionAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometry/QueryAnswer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/bbd_tree/QueryAnswer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometry/SplittingRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometry/bbd_tree/SplittingRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/CellTreeModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/CellTreeModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/DrawPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/DrawPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/InputPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/InputPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/TreePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/TreePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Visualiser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Visualiser.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -242,7 +192,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-347" />
     <option name="width" value="1346" />
     <option name="height" value="688" />
@@ -413,15 +363,15 @@
       <updated>1533316301426</updated>
       <workItem from="1533316304850" duration="80031000" />
       <workItem from="1534241839599" duration="8078000" />
-      <workItem from="1534954400852" duration="69100000" />
+      <workItem from="1534954400852" duration="69235000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157209000" />
+    <option name="totallyTimeSpent" value="157344000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
